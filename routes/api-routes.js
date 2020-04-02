@@ -50,4 +50,24 @@ module.exports = function(app) {
       });
     }
   });
+
+  app.get("/api/userinterests", function(req, res) {
+    db.UserInterests.findAll().then(function(dbUserInterest) {
+      res.json(dbUserInterest);
+    });
+  });
+
+  app.get("/api/user_data", function(data) {
+    $(".member-name").text(data.email);
+  });
+
+  app.post("/api/userinterests", function(req, res) {
+    console.log();
+    db.UserInterests.create({
+      InterestId: interestId,
+      UserId: req.user.id
+    }).then(function(dbUserInterest) {
+      res.render(dbUserInterest);
+    });
+  });
 };
