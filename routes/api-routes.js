@@ -52,8 +52,10 @@ module.exports = function(app) {
   });
 
   app.get("/api/userinterests", function(req, res) {
-    db.UserInterests.findAll().then(function(dbUserInterest) {
-      res.json(dbUserInterest);
+    db.UserInterests.findAll({ where: { UserId: req.user.id } }).then(function(
+      dbres
+    ) {
+      res.json(dbres);
     });
   });
 
@@ -62,12 +64,17 @@ module.exports = function(app) {
   });
 
   app.post("/api/userinterests", function(req, res) {
-    console.log();
+    console.log("updating user interests", req.body);
+    var id = req.body.id;
     db.UserInterests.create({
-      InterestId: interestId,
-      UserId: req.user.id
-    }).then(function(dbUserInterest) {
-      res.render(dbUserInterest);
-    });
+      InterestId: id,
+      UserId: req.body.id
+    })
+      .then(function(dbres) {
+        res.render(dbres);
+      })
+      .catch(function(err) {
+        res.status(500).json({ error: err });
+      });
   });
 };
