@@ -62,9 +62,9 @@ module.exports = function(app) {
   });
 
   app.post("/api/userinterests", function(req, res) {
-    console.log();
+    console.log(req.user);
     db.UserInterests.create({
-      InterestId: interestId,
+      InterestId: "2",
       UserId: req.user.id
     }).then(function(dbUserInterest) {
       res.render(dbUserInterest);

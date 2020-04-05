@@ -5,11 +5,6 @@ module.exports = function(sequelize) {
     {},
     { timestamps: false }
   );
-  //   Interest.associate = function(models) {
-  //     Interest.belongsToMany(models.User, {
-  //       through: UserInterests
-  //     });
-  //   };
 
   return UserInterests;
 };

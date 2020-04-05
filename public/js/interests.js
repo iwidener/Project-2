@@ -12,23 +12,27 @@
 //   });
 
 $(document).ready(function() {
-  $.get("/api/user_data").then(function(data) {
-    $(".member-name").text(data.email);
-    console.log(data.id);
-  });
   var interestForm = $(".interestForm");
   var interestName = $("input.interest");
+  $(document).ready(function() {
+    var form = $(".interestForm").serialize();
+    console.log(form);
+
+    // $("#submit").on("click", function(interest) {
+  });
 
   interestForm.on("submit", function(event) {
     event.preventDefault();
+    // var InterestId = interestName.match(/(\d+)/);
+    // console.log(InterestId);
     var userInterest = {
       name: interestName.val().trim()
     };
 
-    showInterest(userInterest.name);
+    logInterest(userInterest.name);
   });
 
-  function showInterest(name) {
+  function logInterest(name) {
     $.post("/api/userinterests", {
       interestName: name
     }).then(function() {
