@@ -25,13 +25,15 @@ module.exports = function(app) {
   // Here we've add our isAuthenticated middleware to this route.
   // If a user who is not logged in tries to access this route they will be redirected to the signup page
   app.get("/members", isAuthenticated, function(req, res) {
+    // console.log(req.user);
     res.sendFile(path.join(__dirname, "../public/members.html"));
   });
 
   // Get all interests
-  app.get("/interests", function(req, res) {
+  app.get("/interests", isAuthenticated, function(req, res) {
     db.Interest.findAll()
       .then(function(data) {
+        console.log(data);
         var context = {
           allInterests: data.map(function(interests) {
             return {
