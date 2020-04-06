@@ -48,4 +48,29 @@ module.exports = function(app) {
         res.status(500).send(error);
       });
   });
+
+  app.get("/userinterests", function(req, res) {
+    db.UserInterests.findAll({
+      where: {
+        UserId: req.user.id
+      }
+    })
+      .then(function(data) {
+        var context = {
+          allChosen: data.map(function(userInterests) {
+            return {
+              interestName: userInterests.interestName,
+              UserId: userInterests.UserId,
+              InterestId: userInterests.InterestId
+            };
+          })
+        };
+        res.render("userinterests", {
+          allChosen: context.allChosen
+        });
+      })
+      .catch(function(error) {
+        res.status(500).send(error);
+      });
+  });
 };
