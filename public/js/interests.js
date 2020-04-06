@@ -4,17 +4,13 @@ $(document).ready(function() {
     var interests = $(this).serializeArray();
     event.preventDefault();
     $.post("/api/userinterests", {
-      id: interests[0].name
+      id: interests[0].name,
+      name: interests[0].value
     }).then(function() {
-      window.location.replace("/members");
-    });
-  });
+      window.location.replace("/userinterests");
+      console.log("these interests: " + JSON.stringify(interests));
 
-  $.get("/api/user_data").then(function(user) {
-    console.log(user);
-    return $.get("/api/authors/" + user.id).then(function(userWithInterests) {
-      userData = userWithInterests;
-      console.log("current user is: ", userWithInterests);
+      console.log("hi");
     });
+   });
   });
-});

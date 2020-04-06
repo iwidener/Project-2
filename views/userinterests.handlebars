@@ -1,0 +1,13 @@
+<h2>These are your interests <span class="member-name"></span></h2>
+
+
+<ul>
+  {{#each allChosen}}
+  	<li id="{{InterestId}}">
+          <a href="/">{{interestName}}</a>
+  	</li>
+    <br>
+  {{/each}}
+</ul>
+
+<script src="/js/userinterests.js"></script>
