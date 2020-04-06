@@ -23,12 +23,6 @@ module.exports = function(sequelize, DataTypes) {
     { timestamps: false }
   );
 
-  // creates UserInterests table with no timestamps
-  // var UserInterests = sequelize.define(
-  //   "UserInterests",
-  //   {},
-  //   { timestamps: false }
-  // );
   User.associate = function(models) {
     User.belongsToMany(models.Interest, {
       through: models.UserInterests

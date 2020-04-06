@@ -59,19 +59,23 @@ module.exports = function(app) {
     });
   });
 
-  app.get("/api/user_data", function(data) {
-    $(".member-name").text(data.email);
-  });
+  // app.get("/api/user_data", function(data) {
+  //   $(".member-name").text(data.email);
+  // });
 
   app.post("/api/userinterests", function(req, res) {
-    console.log("updating user interests", req.body);
+    // console.log("updating user interests", req.user);
     var id = req.body.id;
+    var name = req.body.name;
+    // console.log(req.body);
     db.UserInterests.create({
+      interestName: name,
       InterestId: id,
-      UserId: req.body.id
+      UserId: req.user.id
     })
-      .then(function(dbres) {
-        res.render(dbres);
+      .then(function() {
+        res.redirect("/userinterests");
+
       })
       .catch(function(err) {
         res.status(500).json({ error: err });
