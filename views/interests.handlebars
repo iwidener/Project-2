@@ -1,6 +1,6 @@
 <h2>Select as many interests as you'd like!</h2>
 
-<form class="interestForm" action="/members">
+<form class="interestForm">
 
     {{#each allInterests}}
     <input type="checkbox" class="interest" id={{id}} name={{id}} value={{interestName}}>
@@ -9,5 +9,5 @@
     {{/each}}
     
     <br>
-    <input type="submit" value="Submit">
+    <input id="submit" type="submit" value="Submit">
 </form>
