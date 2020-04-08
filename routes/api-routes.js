@@ -75,7 +75,6 @@ module.exports = function(app) {
     })
       .then(function() {
         res.redirect("/userinterests");
-
       })
       .catch(function(err) {
         res.status(500).json({ error: err });

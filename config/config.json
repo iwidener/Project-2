@@ -1,25 +1,25 @@
 {
     "development": {
         "username": "root",
-        "password": "pastor16",
+        "password": "password",
         "database": "friendly",
-        "host": "127.0.0.1",
+        "host": "localhost",
         "dialect": "mysql",
         "operatorsAliases": false
     },
     "test": {
         "username": "root",
-        "password": "pastor16",
+        "password": "password",
         "database": "friendly",
-        "host": "127.0.0.1",
+        "host": "localhost",
         "dialect": "mysql",
         "operatorsAliases": false
     },
     "production": {
         "username": "root",
-        "password": "pastor16",
+        "password": "password",
         "database": "friendly",
-        "host": "127.0.0.1",
+        "host": "localhost",
         "dialect": "mysql",
         "operatorsAliases": false
     }
