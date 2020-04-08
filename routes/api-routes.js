@@ -65,9 +65,11 @@ module.exports = function(app) {
     // console.log("updating user interests", req.user);
     var id = req.body.id;
     var name = req.body.name;
-    // console.log(req.body);
+    var email = req.user.email;
+    console.log("This is the user " + JSON.stringify(req.user));
     db.UserInterests.create({
       interestName: name,
+      userEmail: email,
       InterestId: id,
       UserId: req.user.id
     })
