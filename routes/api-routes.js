@@ -52,8 +52,10 @@ module.exports = function(app) {
   });
 
   app.get("/api/userinterests", function(req, res) {
-    db.UserInterests.findAll().then(function(dbUserInterest) {
-      res.json(dbUserInterest);
+    db.UserInterests.findAll({ where: { UserId: req.user.id } }).then(function(
+      dbres
+    ) {
+      res.json(dbres);
     });
   });
 

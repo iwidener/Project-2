@@ -1,0 +1,12 @@
+<h2>Users who share your interests: <span class="member-name"></span></h2>
+
+<ul>
+  {{#each thisInterest}}
+  	<li class="old" data-id={{InterestId}} id="{{userEmail}}">
+          <a href="/">{{userEmail}}</a>
+  	</li>
+    <br>
+  {{/each}}
+</ul>
+
+<script src="/js/userinterests.js"></script>

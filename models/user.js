@@ -26,6 +26,9 @@ module.exports = function(sequelize, DataTypes) {
   User.associate = function(models) {
     User.belongsToMany(models.Interest, {
       through: models.UserInterests
+      // foreignKey: {
+      //   name: "UserId"
+      // }
     });
   };
 
