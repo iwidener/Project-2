@@ -8,7 +8,7 @@ var session = require("express-session");
 var passport = require("./config/passport");
 
 //Requiring npm dotenv
-require("dotenv").config();
+// require("dotenv").config();
 
 //Connect to socket.io
 var io = require("socket.io")(server);
