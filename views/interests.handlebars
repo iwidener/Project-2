@@ -1,8 +1,20 @@
-<a id="home" href="/">Home</a>
+<head>
+<title>Interests</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/lumen/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+<link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+<link href="stylesheets/style.css" rel="stylesheet">
+</head>
 
-<h2>Select as many interests as you'd like!</h2>
+<a class="text-purple-300" id="home" href="/">Home</a>
+<h1 class="font-mono text-6xl text-orange-300 text-center">friendly</h1>
 
-<form class="interestForm">
+<h2 class="text-center text-green-200 font-sans">Select as many interests as you'd like!</h2>
+<br>
+
+<form class="text-center text-green-200 interestForm">
 
     {{#each allInterests}}
     <input type="checkbox" class="interest" data-id={{id}} id={{id}} name={{id}} value={{interestName}}>
@@ -11,7 +23,8 @@
     {{/each}}
     
     <br>
-    <input type="submit" id="submit" value="Submit">
+    
+    <input class="rounded bg-gray-600 p-3" type="submit" id="submit" value="Submit">
 </form>
 
 <script src="/js/interests.js"></script>
