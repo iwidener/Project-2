@@ -30,7 +30,7 @@
     "passport-local": "^1.0.0",
     "sequelize": "^5.21.6",
     "session": "^0.1.0",
-    "tailwindcss": "^1.2.0"
+    "tailwindcss": "^1.2.0",
     "sequelize": "^5.8.6",
     "socket.io": "^2.3.0",
     "socket.io-client": "^2.3.0"
