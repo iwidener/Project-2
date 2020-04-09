@@ -18,6 +18,20 @@ module.exports = function(sequelize, DataTypes) {
       password: {
         type: DataTypes.STRING,
         allowNull: false
+      },
+      // phone # must be bw 10 and 11 digits and must be unique
+      phone: {
+        type: DataTypes.INTEGER,
+        allowNull: false,
+        unique: true,
+        validate: {
+          isInt: true,
+          len: [10, 11]
+        }
+      },
+      age: {
+        type: DataTypes.INTEGER,
+        allowNull: false
       }
     },
     { timestamps: false }
@@ -26,9 +40,6 @@ module.exports = function(sequelize, DataTypes) {
   User.associate = function(models) {
     User.belongsToMany(models.Interest, {
       through: models.UserInterests
-      // foreignKey: {
-      //   name: "UserId"
-      // }
     });
   };
 

@@ -19,20 +19,4 @@ module.exports = function(app) {
       res.json(dbInterest);
     });
   });
-
-  app.post("/api/interests", function(req, res) {
-    db.Interest.create(req.body).then(function(dbInterest) {
-      res.json(dbInterest);
-    });
-  });
-
-  app.delete("/api/interest/:id", function(req, res) {
-    db.Interest.destroy({
-      where: {
-        id: req.params.id
-      }
-    }).then(function(dbInterest) {
-      res.json(dbInterest);
-    });
-  });
 };
