@@ -3,7 +3,7 @@
 <form class="interestForm">
 
     {{#each allInterests}}
-    <input type="checkbox" class="interest" id={{id}} name={{id}} value={{interestName}}>
+    <input type="checkbox" class="interest" data-id={{id}} id={{id}} name={{id}} value={{interestName}}>
     <label for={{id}}>{{id}}. {{interestName}}</label><br><br>
 
     {{/each}}

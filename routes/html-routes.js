@@ -1,6 +1,7 @@
 // Requiring path to so we can use relative routes to our HTML files
 var path = require("path");
 var db = require("../models");
+var Sequelize = require("sequelize");
 
 // Requiring our custom middleware for checking if a user is logged in
 var isAuthenticated = require("../config/middleware/isAuthenticated");
@@ -69,6 +70,37 @@ module.exports = function(app) {
         };
         res.render("userinterests", {
           allChosen: context.allChosen
+        });
+      })
+      .catch(function(error) {
+        res.status(500).send(error);
+      });
+  });
+  app.get("/userinterest/:id", function(req, res) {
+    console.log("params: " + req.params.id);
+    console.log(req.user);
+    db.UserInterests.findAll({
+      where: {
+        InterestId: req.params.id,
+        userEmail: {
+          [Sequelize.Op.not]: req.user.email
+        }
+      }
+    })
+      .then(function(data) {
+        var context = {
+          thisInterest: data.map(function(myInterest) {
+            return {
+              interestName: myInterest.interestName,
+              userEmail: myInterest.userEmail,
+              UserId: myInterest.UserId,
+              InterestId: myInterest.InterestId,
+              userPhone: myInterest.userPhone
+            };
+          })
+        };
+        res.render("single-interest", {
+          thisInterest: context.thisInterest
         });
       })
       .catch(function(error) {

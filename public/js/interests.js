@@ -2,6 +2,7 @@ $(document).ready(function() {
   var interestForm = $(".interestForm");
   interestForm.on("submit", function(event) {
     var interests = $(this).serializeArray();
+
     event.preventDefault();
     for (var i = 0; i < interests.length; i++) {
       $.post("/api/userinterests", {

@@ -10,7 +10,8 @@ module.exports = function(app) {
     // Sending back a password, even a hashed password, isn't a good idea
     res.json({
       email: req.user.email,
-      id: req.user.id
+      id: req.user.id,
+      phone: req.user.phone
     });
   });
 
@@ -20,7 +21,9 @@ module.exports = function(app) {
   app.post("/api/signup", function(req, res) {
     db.User.create({
       email: req.body.email,
-      password: req.body.password
+      password: req.body.password,
+      phone: req.body.phone,
+      age: req.body.age
     })
       .then(function() {
         res.redirect(307, "/api/login");
@@ -46,7 +49,9 @@ module.exports = function(app) {
       // Sending back a password, even a hashed password, isn't a good idea
       res.json({
         email: req.user.email,
-        id: req.user.id
+        id: req.user.id,
+        phone: req.user.phone,
+        age: req.user.age
       });
     }
   });
@@ -59,23 +64,21 @@ module.exports = function(app) {
     });
   });
 
-  // app.get("/api/user_data", function(data) {
-  //   $(".member-name").text(data.email);
-  // });
-
   app.post("/api/userinterests", function(req, res) {
-    // console.log("updating user interests", req.user);
+    console.log(req.user);
     var id = req.body.id;
     var name = req.body.name;
-    // console.log(req.body);
+    var email = req.user.email;
+    console.log("This is the user " + JSON.stringify(req.user));
     db.UserInterests.create({
       interestName: name,
+      userEmail: email,
       InterestId: id,
-      UserId: req.user.id
+      UserId: req.user.id,
+      userPhone: req.user.phone
     })
       .then(function() {
         res.redirect("/userinterests");
-
       })
       .catch(function(err) {
         res.status(500).json({ error: err });

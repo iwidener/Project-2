@@ -1,0 +1,27 @@
+<h2><span class="member-name"></span>, these users share your interest in {{thisInterest.0.interestName}}:
+</h2>
+<br>
+
+<ul style="list-style-type:none">
+  {{#each thisInterest}}
+  <li class="old" data-id={{InterestId}} id="{{userEmail}}">
+    Email: <a id="email" href="mailto:{{userEmail}}">{{userEmail}}</a>
+    <br>
+    Phone: <a>{{userPhone}}</a>
+  </li>
+  <br>
+  {{/each}}
+</ul>
+<br>
+<div class="container">
+  <h2>Send SMS Message</h2>
+  <input type="tel" name="number" id="number" placeholder="Enter Phone NUmber...">
+  <input type="text" name="msg" id="msg" placeholder="Enter Text Message...">
+  <input type="button" id="button" value="Send Text" class="button button-primary">
+  <p class="response"></p>
+</div>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css">
+
+<script src="/js/single-interests.js"></script>
+<script src="/js/message.js"></script>
