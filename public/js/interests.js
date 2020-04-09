@@ -3,14 +3,14 @@ $(document).ready(function() {
   interestForm.on("submit", function(event) {
     var interests = $(this).serializeArray();
     event.preventDefault();
-    $.post("/api/userinterests", {
-      id: interests[0].name,
-      name: interests[0].value
-    }).then(function() {
-      window.location.replace("/userinterests");
-      console.log("these interests: " + JSON.stringify(interests));
-
-      console.log("hi");
-    });
-   });
+    for (var i = 0; i < interests.length; i++) {
+      $.post("/api/userinterests", {
+        id: interests[i].name,
+        name: interests[i].value
+      }).then(function() {
+        window.location.replace("/userinterests");
+        console.log("these interests: " + JSON.stringify(interests));
+      });
+    }
   });
+});
