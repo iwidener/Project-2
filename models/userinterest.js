@@ -5,17 +5,15 @@ module.exports = function(sequelize, DataTypes) {
     {
       interestName: {
         type: DataTypes.STRING,
-        allowNull: false,
-        validate: {
-          len: [1]
-        }
+        allowNull: false
       },
       userEmail: {
         type: DataTypes.STRING,
-        allowNull: false,
-        validate: {
-          isEmail: true
-        }
+        allowNull: false
+      },
+      userPhone: {
+        type: DataTypes.INTEGER,
+        allowNull: false
       }
     },
     { timestamps: false }

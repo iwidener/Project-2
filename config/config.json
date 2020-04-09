@@ -1,26 +1,27 @@
 {
     "development": {
-        "username": "root",
-        "password": "password",
-        "database": "friendly",
-        "host": "localhost",
-        "dialect": "mysql",
-        "operatorsAliases": false
+      "username": "root",
+      "password": "Inuyasha1",
+      "database": "friendly",
+      "host": "127.0.0.1",
+      "dialect": "mysql",
+      "operatorsAliases": false
     },
     "test": {
-        "username": "root",
-        "password": "password",
-        "database": "friendly",
-        "host": "localhost",
-        "dialect": "mysql",
-        "operatorsAliases": false
+      "username": "root",
+      "password": "Inuyasha1",
+      "database": "friendly",
+      "host": "127.0.0.1",
+      "dialect": "mysql",
+      "operatorsAliases": false
     },
     "production": {
-        "username": "root",
-        "password": "password",
-        "database": "friendly",
-        "host": "localhost",
-        "dialect": "mysql",
-        "operatorsAliases": false
+      "username": "root",
+      "password": "Inuyasha1",
+      "database": "friendly",
+      "host": "127.0.0.1",
+      "dialect": "mysql",
+      "operatorsAliases": false
     }
-}
+  }
+  

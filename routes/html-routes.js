@@ -94,7 +94,8 @@ module.exports = function(app) {
               interestName: myInterest.interestName,
               userEmail: myInterest.userEmail,
               UserId: myInterest.UserId,
-              InterestId: myInterest.InterestId
+              InterestId: myInterest.InterestId,
+              userPhone: myInterest.userPhone
             };
           })
         };
