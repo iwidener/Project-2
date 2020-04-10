@@ -1,17 +1,17 @@
 {
     "development": {
-      "username": "root",
-      "password": "Inuyasha1",
-      "database": "friendly",
-      "host": "127.0.0.1",
+      "username": "ixv0q9tj8rybuh89",
+      "password": "wkq92r1yjb2ijv0r",
+      "database": "edqeefg28isrgbrk",
+      "host": "dno6xji1n8fm828n.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
       "dialect": "mysql",
       "operatorsAliases": false
     },
     "test": {
-      "username": "root",
-      "password": "Inuyasha1",
-      "database": "friendly",
-      "host": "127.0.0.1",
+      "username": "ixv0q9tj8rybuh89",
+      "password": "wkq92r1yjb2ijv0r",
+      "database": "edqeefg28isrgbrk",
+      "host": "dno6xji1n8fm828n.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
       "dialect": "mysql",
       "operatorsAliases": false
     },
