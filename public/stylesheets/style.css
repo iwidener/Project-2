@@ -1,4 +1,27 @@
 form.signup,
 form.login {
+  margin-top: 15px;
+}
+
+body {
+  background-image: url('silhouette.jpg');
+  background-size: 100%;
+}
+
+.text-6xl {
+  margin-bottom: 30px;
+}
+
+.h-24 {
   margin-top: 50px;
 }
+
+/* .text-6xl {
+  font-family: 'Pacifico';
+} */
+
+@tailwind base;
+
+@tailwind components;
+
+@tailwind utilities;

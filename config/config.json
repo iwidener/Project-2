@@ -15,11 +15,10 @@
     },
     "production": {
 
-      "username": "root",
-      "password": "password",
-      "database": "friendly",
-      "host": "localhost",
+      "use_env_variable": "JAWSDB_URL",
       "dialect": "mysql"
+
+
     }
   }
   

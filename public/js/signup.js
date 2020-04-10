@@ -42,7 +42,6 @@ $(document).ready(function() {
       ageInput.val("");
     }
   });
-
   // Does a post to the signup route. If successful, we are redirected to the members page
   // Otherwise we log any errors
   function signUpUser(email, password, phone, age) {
@@ -58,7 +57,6 @@ $(document).ready(function() {
       })
       .catch(handleLoginErr);
   }
-
   function handleLoginErr(err) {
     $("#alert .msg").text(JSON.stringify(err.responseJSON));
     $("#alert").fadeIn(500);
