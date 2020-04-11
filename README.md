@@ -13,29 +13,33 @@
 
 ## Description
 
+As someone in the modern era of social disconnection.
+I want an app that allows me to connect remotely with people who have similar interests as me.
+So that I can make more friends and grow my network over the Internet.
+
 This is a group project to come up with an app that allows users to make new friends or contacts based on shared interests. The user will sign up with their email, phone number and age (18 and older), then choose activites to be matched to other people. The user will then be given information to be allowed to connect with others who share those interests chosen.
 
 ## Table of Contents
 
 * [Description](#Description)
 * [Installation](#Installation)
-* [Usage](#Usage)
+* [Deployment](#Deployment)
 * [Contributors](#Contributors)
 
 ## Installation
 
-Run npm install and type node server.js to get started.
+Run npm install and use node server.js to get started.
 
-## Usage
+## Deployment
 
-Select your interests to be connected with users that share the same.
+https://immense-garden-32852.herokuapp.com/
 
 ## Contributors
 
-Kayla Gordon
+Kayla G.
 
-Inna Widener
+Inna W.
 
-Valerie Earl
+Valerie E.
 
-Randy Vaca
+Randy V.
