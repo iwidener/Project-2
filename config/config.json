@@ -1,19 +1,17 @@
 {
     "development": {
       "username": "root",
-      "password": "Inuyasha1",
+      "password": "password",
       "database": "friendly",
-      "host": "127.0.0.1",
-      "dialect": "mysql",
-      "operatorsAliases": false
+      "host": "localhost",
+      "dialect": "mysql"
     },
     "test": {
       "username": "root",
-      "password": "Inuyasha1",
+      "password": "password",
       "database": "friendly",
-      "host": "127.0.0.1",
-      "dialect": "mysql",
-      "operatorsAliases": false
+      "host": "localhost",
+      "dialect": "mysql"
     },
     "production": {
 

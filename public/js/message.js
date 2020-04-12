@@ -6,7 +6,7 @@ $(document).ready(function() {
 
   button.addEventListener("click", send, false);
 
-  var socket = io("http://localhost:8080");
+  var socket = io(window.location.origin);
   socket.on("smsStatus", function(data) {
     response.innerHTML =
       "<h5>Text message sent to " +
