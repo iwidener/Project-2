@@ -19,7 +19,7 @@
     "bulma": "^0.8.1",
     "express": "^4.17.0",
     "dotenv": "^8.2.0",
-    "express-handlebars": "^4.0.0",
+    "express-handlebars": "^5.3.1",
     "express-session": "^1.16.1",
     "handlebars": "^4.7.6",
     "local": "^0.3.3",
